@@ -62,11 +62,26 @@ function btnEncriptar() {
 function btnDesencriptar() {
     let texto = campo_texto.value;
     if (verificarTexto(texto)){
-        texto = texto.replace(/enter/mg,"e");
-        texto = texto.replace(/imes/mg,"i");
-        texto = texto.replace(/ai/mg,"a");
-        texto = texto.replace(/ober/mg,"o");
-        texto = texto.replace(/ufat/mg,"u");
+        /* 
+            Esta parte del código se utiliza una expresión regular para evitar problemas al desencriptar el texto.
+            Ejemplo de ello es la palabra "jaimenters" que por error me daba como resultado "ja" 
+        */
+        texto = texto.replace(/(?:enter|imes|ai|ober|ufat)/g, function(match) {
+            switch (match) {
+                case "enter":
+                    return "e";
+                case "imes":
+                    return "i";
+                case "ai":
+                    return "a";
+                case "ober":
+                    return "o";
+                case "ufat":
+                    return "u";
+                default:
+                    return match;
+            }
+        });
 
         campo_mensaje.innerHTML = texto;
 
