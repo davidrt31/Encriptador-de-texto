@@ -64,7 +64,8 @@ function btnDesencriptar() {
     if (verificarTexto(texto)){
         /* 
             Esta parte del código se utiliza una expresión regular para evitar problemas al desencriptar el texto.
-            Ejemplo de ello es la palabra "jaimenters" que por error me daba como resultado "ja" 
+            Ejemplo de ello es la palabra "jaimenters" que por error me daba como resultado "ja". 
+            NOTA: Gracias al compañero que me guió para esta solución :D
         */
         texto = texto.replace(/(?:enter|imes|ai|ober|ufat)/g, function(match) {
             switch (match) {
