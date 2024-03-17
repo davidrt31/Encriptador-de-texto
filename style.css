@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Variables para colores*/
+
+:root{
+    --color-bg: #FDFFFC;
+    --color-text: #020100;
+    --color-alerta: #ff4343;
+    --color-alerta-copia: #62dd1b;
+    --color-btn-primario: #020100;
+    --color-btn-secundario:  #F25F5C;
+    --colot-text-btn: #FFFFFF;
+    --color-text-btn-hover: #000000;
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    background: var(--color-bg);
+}
+
+main{
+    height: 100vh;
+}
+
+/* Encabezado */
+
+#logo-alura{
+    background: #020100;
+    border-radius: 100%;
+    width: 50px;
+    margin-right: 20px;
+}
+
+h1{
+    font-weight: normal;
+}
+
+.contenedor-informacion{
+    align-items: center;
+    display: flex;
+    width: 90%;
+    height: 12%;
+    margin: 0px auto;
+    padding: 10px;
+    border-bottom: 2px solid #727072;
+}
+
+/* Contenido */
+
+.contenedor-contenido{
+    width: 90%;
+    height: 80%;
+    margin: 0px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 66% 33%;
+    gap: 20px;
+}
+
+section{
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    width: 100%;
+    border: 2px #596869 solid;
+    border-radius: 20px;
+    height: 80%;
+    resize: none;
+    padding: 20px;
+    font-size: 24px;
+    background: transparent;
+    color: var(--color-text);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+textarea::placeholder{
+    font-size: 24px;
+    color: var(--color-text);
+    pointer-events: none;
+}
+
+.contenido-mensaje{
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.contenido-mensaje::placeholder{
+    text-align: center;
+    pointer-events: none;
+}
+
+#imagen-mensaje{
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 67.25%;
+    transform: translate(0%,-50%);
+    opacity: 50%;
+    pointer-events: none;
+}
+
+#advertencia{
+    color: var(--color-alerta);
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+}
+
+#alerta-copia{
+    color: var(--color-alerta-copia);
+    margin-top: 10px;
+    text-align: center;
+    opacity: 0;
+}
+
+.btns{
+    width: 100%;
+    height: 14%;
+    display: flex;
+    align-items: end;
+    margin-top: auto;    
+}
+
+.btns button{
+    margin: 0 auto;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px transparent solid;
+    font-size: 18px;
+    background: var(--color-btn-primario);
+    color: var(--colot-text-btn);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btns button:hover{
+    background: white;
+    border: 2px black solid;
+    color: var(--color-text-btn-hover);
+}
+
+/* Pie de página */
+
+.contenedor-datos{
+    height: 8%;
+    width: 100%;
+    display: flex;
+    background: #020100;
+    align-items: center;
+    justify-content:center;
+}
+
+.contenedor-datos ul{
+    display: flex;
+    gap: 25px;
+}
+
+.contenedor-datos ul li{
+    color: white;
+}
+
+#logo-github{
+    width: 30px;
+    height: auto;
+    
+}
+
+.copy{
+    font-size: 22px;
+}
